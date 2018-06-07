@@ -679,7 +679,7 @@ public class ExposedBridge {
         try {
             fis = new FileInputStream(propertyFile);
             Properties properties = new Properties();
-            properties.load(new FileInputStream(propertyFile));
+            properties.load(fis);
             return properties.getProperty(VERSION_KEY);
         } catch (IOException e) {
             log("getXposedVersion from property failed");
